@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  min-width: 0;
+}
+body {
+  background: #f28dcf;
+}
+
+.Wrapper:hover .envelopeFlap{
+  animation: liftEnvelope cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+} 
+.Wrapper:hover .letter{
+  animation: liftLetter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes liftLetter {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(-10%);
+  }
+  
+}
+
+@keyframes liftEnvelope {
+  0%{
+    transform:rotateX(0deg)
+  }
+  100%{
+    transform:rotateX(180deg)
+  }
+}
+
+@layer components {
+  .Wrapper{
+    @apply flex relative justify-center items-center z-0 w-128 h-72;
+  }
+  .envelopeClass {
+    @apply absolute h-[100%] w-[100%] top-0 left-0 rounded-md border-t-transparent border-b-pink-300 border-l-pink-200 border-r-pink-200
+    transition-all border-t-[144px] border-b-[144px] border-x-[144px] z-[3] ;
+  }
+  .envelopeFlap{
+    @apply absolute border-[144px] border-t-pink-400 border-x-transparent border-b-transparent rounded-md justify-center items-center w-128 h-72 z-[3];
+  }
+  .letter{
+    @apply absolute bg-white w-[80%] h-[80%] rounded-md text-center z-[2] transition-all;
+  }
+}
