@@ -46,10 +46,10 @@ body {
   }
   .envelopeClass {
     @apply absolute h-[100%] w-[100%] top-0 left-0 rounded-md border-t-transparent border-b-pink-300 border-l-pink-200 border-r-pink-200
-    transition-all border-t-[144px] border-b-[144px] border-x-[144px] z-[3] ;
+    transition-all border-t-[9rem] border-b-[9rem] border-x-[9rem] z-[3] ;
   }
   .envelopeFlap{
-    @apply absolute border-[144px] border-t-pink-400 border-x-transparent border-b-transparent rounded-md justify-center items-center w-128 h-72 z-[3];
+    @apply absolute border-[9rem] border-t-pink-400 border-x-transparent border-b-transparent rounded-md justify-center items-center w-128 h-72 z-[3];
   }
   .letter{
     @apply absolute bg-white w-[80%] h-[80%] rounded-md text-center z-[2] transition-all;

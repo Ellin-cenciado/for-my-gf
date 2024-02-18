@@ -2,7 +2,7 @@
 
 function App() {
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
+    <div className="flex h-screen w-screen justify-center items-center">
       <Wrapper />
     </div>
   );
@@ -36,7 +36,7 @@ function EnvelopeFlap() {
 
 function EnvelopeBg() {
   return (
-    <div className="absolute bg-pink-300 rounded-md justify-center items-center w-128 h-72 z-[-1]"></div>
+    <div className="absolute bg-pink-400 rounded-md justify-center items-center w-128 h-72 z-[-1]"></div>
   );
 }
 
